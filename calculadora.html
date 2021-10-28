@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    <link rel="stylesheet" href="calculadora.css">
+</head>
+<body>
+    <div id="main">
+
+        <!-- Barra de navegacion -->
+        <div id="menu-nav-bar">
+            <div class="menu-inline">
+                <div class="logo">
+                    <h3>SMN</h3>
+                </div>
+                <a href="index.html">Inicio</a>
+                <a href="ejercicios.html">Ejercicios</a>
+                <a href="#">Dieta</a>
+                <a href="#">Rutina personalizada</a>
+                <a href="calculadora.html">Calc. IMC</a>
+            </div>
+
+            <div>
+                <a href="#">Perfil</a>
+            </div>
+            <!-- <a href="#"></a> -->
+
+        </div>
+
+        <div id="calculadora">
+
+            <div class="wiki-calculadora">
+                <h2>Como Funciona la Calculadora de IMC</h2>
+
+                <br>
+
+                <p>
+                    El Índice de Masa Corporal (IMC) es una medida de asociación entre el peso y la talla de una persona. El IMC es usado como uno de varios indicadores para evaluar el estado nutricional. <br><br>
+
+                    El IMC constituye la medida poblacional más útil del sobrepeso y la obesidad, pues la forma de calcularlo no varía en función del sexo ni de la edad en la población adulta. No obstante, debe considerarse como una guía aproximativa, pues puede no corresponder al mismo grado de gordura en diferentes individuos. <br><br>
+
+                    La Organización Mundial de la Salud, ha propuesto una clasificación del estado nutricional dependiendo del IMC de una persona.
+                </p><br><br><br>
+
+                <center><img src="img/imc.jpg" alt="IMC" width="50%"></center>
+                
+            </div>
+
+
+            <div class="formulario-calculadora">
+                <form  method="get">
+
+                    <div>
+                        <h2>Calculadora IMC</h2>
+                    </div>
+                    
+                    <div>
+                        <label for="kilos">Kilogramos</label>
+                        <input type="number" name="kilos" id="kilos" placeholder="30 o 30.5">
+                    </div>
+
+                    <div>
+                        <label for="altura">Altura en metros</label>
+                        <input type="text" name="altura" id="altura" placeholder="1.71">
+                    </div>
+
+                    <div>
+                        <input type="button" value="Calcular" id="calcular">
+                    </div>
+                </form>
+
+                <div class="resultado">
+                    <h4>Resultado</h4>
+
+                    <div class="estado-imc">
+                        <div class="bajo-peso">
+                            <div id="f-bp"></div>
+                            <h4>Bajo Peso</h4>
+                        </div>
+                        
+                        <div class="saludable">
+                            <div id="f-s"></div>
+                            <h4>Saludable</h4>
+                        </div>
+                        
+                        <div class="sobrepeso">
+                            <div id="f-sp"></div>
+                            <h4>Sobrepeso</h4>
+                        </div>
+
+                        <div class="obeso">
+                            <div id="f-o"></div>
+                            <h4>Obeso</h4>
+                        </div>
+                    </div>
+
+                    <!-- <div class="contenedor-flecha">
+                        <div class="flecha"></div>
+                    </div> -->
+
+                    <div id="contenedor-parrafo">
+                        <div class="parrafo"></div>
+                    </div>
+                </div>  
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    <script>
+        var ref_kilos = document.getElementById("kilos")
+        var ref_altura = document.getElementById("altura")
+        var btn_calcular = document.getElementById("calcular")
+        var ref_f_bp = document.getElementById("f-bp")
+        var ref_f_s = document.getElementById("f-s")
+        var ref_f_sp = document.getElementById("f-sp")
+        var ref_f_o = document.getElementById("f-o")
+
+        btn_calcular.onclick = function(){
+            var kilos = ref_kilos.value;
+            var altura = ref_altura.value;
+
+            if(kilos > 20 && altura >= 1){
+                var altura_cuadrado = parseFloat(altura) * parseFloat(altura)
+                var resultado = Math.round((kilos / altura_cuadrado) * 100) / 100
+
+                if(parseInt(resultado) <= 17){
+                    ref_f_s.style.display = "none"
+                    ref_f_sp.style.display = "none"
+                    ref_f_o.style.display = "none"
+                    ref_f_bp.style.display = "block"
+                }
+
+                else if(parseInt(resultado) >= 18 && parseInt(resultado) <= 24){
+                    ref_f_bp.style.display = "none"
+                    ref_f_sp.style.display = "none"
+                    ref_f_o.style.display = "none"
+                    ref_f_s.style.display = "block"
+                }
+
+                else if(parseInt(resultado) >= 25 && parseInt(resultado) <= 29){
+                    ref_f_bp.style.display = "none"
+                    ref_f_o.style.display = "none"
+                    ref_f_s.style.display = "none"
+                    ref_f_sp.style.display = "block"
+                }
+
+                else if(parseInt(resultado) >= 30){
+                    ref_f_bp.style.display = "none"
+                    ref_f_s.style.display = "none"
+                    ref_f_sp.style.display = "none"
+                    ref_f_o.style.display = "block"
+                }
+
+                document.getElementById("contenedor-parrafo").innerHTML = "Tu porcentaje de grasa corporal es: " + resultado + "%"
+
+                ref_kilos.value = ""
+                ref_altura.value = ""
+            }else{
+                alert("Ingrese kilogramos o altura")
+            }
+        }
+    </script>
+</body>
+</html>
