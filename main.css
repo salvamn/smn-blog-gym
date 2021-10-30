@@ -104,9 +104,7 @@
         #main{
             width: 100%;
             height: auto;
-            /* background-image: none; */
-            /* background-size: ; */
-            /* background-color: #333; */
+            background-size: auto;
             background-position: center;
         }
 
@@ -132,6 +130,7 @@
         }
 
         #contenido-principal{
+            /* flex-shrink: 2; */
             /* margin-top: 10px; */
             /* margin-bottom: 10px; */
             padding: 10px;
@@ -142,7 +141,7 @@
 
         #contenido-principal div{
             /* margin: 5px 0px 5px 0px; */
-            width: auto;
+            width: 100%;
             height: auto;
             padding: 20px;
             margin: 10px;

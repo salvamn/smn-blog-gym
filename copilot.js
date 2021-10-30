@@ -4,3 +4,5 @@ function https_request(url) {
     xmlhttp.send(null);
     return xmlhttp.responseText;
 }
+
+
