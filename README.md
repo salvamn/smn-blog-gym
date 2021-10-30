@@ -1,4 +1,5 @@
 ## Web Relacionada con el estado fisico, ejercicios, dietas, calculo de imc, etc.
+Web diseñada para enseñar sobre los musculos, ejercicios, dietas y calcular el IMC, tambien podras crear un perfil donde podras guardar tus rutinas y ver tu progreso semanal, mensual y anual.
 
 ## Inicio
 Apartado donde se encuentra una wikipedia con distintos musculos del **tren superior** como del **tren inferior**.
