@@ -157,10 +157,10 @@
     }
 
 
-
+/* 
     #contenido-principal{
 
-    }
+    } */
 
     #barra-lateral{
         margin: 0px 10px 10px 10px;
@@ -169,9 +169,9 @@
 
     }
 
-    #barra-lateral h2, a{
-        /* margin: 20px; */
-    }
+    /* #barra-lateral h2, a{
+        /* margin: 20px; 
+    } */
 
 
     #contenido-central{

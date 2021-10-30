@@ -95,3 +95,58 @@
     font-weight: bold;
     text-shadow: 1px 1px 5px rgb(4 255 220);
 }
+
+
+@media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    {
+        #main{
+            width: 100%;
+            height: auto;
+            /* background-image: none; */
+            /* background-size: ; */
+            /* background-color: #333; */
+            background-position: center;
+        }
+
+        #menu-nav-bar, .menu-inline{
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+        }
+
+        .logo{
+            width: 100%;
+            text-align: center;
+            margin: 5px 0px 0px 0px;
+        }
+
+        #menu-nav-bar div{
+            margin-bottom: 5px;
+        }
+
+        #menu-nav-bar a{
+            padding: 10px;
+        }
+
+        #contenido-principal{
+            /* margin-top: 10px; */
+            /* margin-bottom: 10px; */
+            padding: 10px;
+            justify-content: center;
+            /* align-items: stretch; */
+
+        }
+
+        #contenido-principal div{
+            /* margin: 5px 0px 5px 0px; */
+            width: auto;
+            height: auto;
+            padding: 20px;
+            margin: 10px;
+            background: #0c17169d;
+        }
+        
+    }
