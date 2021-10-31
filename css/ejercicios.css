@@ -80,10 +80,6 @@
     text-align: center;
 }
 
-.imagen img{
-    /* width: 50%;     */
-}
-
 .tabla{
     display: flex;
     width: 100%;
@@ -117,3 +113,87 @@ h3{
     text-align: center;
     margin-bottom: 10px;
 }
+
+
+@media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    {
+        #main{
+            width: 100%;
+            height: auto;
+        }
+
+        #menu-nav-bar{
+            /* width: inherit; */
+            /* display: flex; */
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+            height: auto;
+            width: 100%;
+
+        }
+
+        .logo{
+            width: 100%;
+            text-align: center;
+            margin: 10px 0px 0px 0px;
+        }
+
+        .menu-inline{
+            display: flex;
+            /* flex-direction: column; */
+            flex-direction: row;
+            /* flex-direction: wrap; */
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            height: auto;
+        }
+
+        #menu-nav-bar a{
+            padding: 7px;
+        }
+
+        #menu-nav-bar div{
+            margin-bottom: 7px;
+        }
+
+        .ejercicio{
+            width: 100%;
+            /* padding: 10px; */
+            padding: 0px;
+        }
+
+        .ejercicio div, ul{
+            padding: 20px;
+        }
+
+        .imagen{
+            width: 100%;
+            padding: 0px !important;
+        }
+
+        .imagen img{
+            width: 100%;
+        }
+
+        .tabla{
+            width: 100%;
+            padding: 0px !important;
+        }
+
+        .tabla table{
+            width: 100%;
+            font-size: 7px;
+        }
+
+        .tabla table thead th{
+            padding: 2px;
+        }
+
+        .tabla table tbody td{
+            padding: 2px;
+        }
+    }
